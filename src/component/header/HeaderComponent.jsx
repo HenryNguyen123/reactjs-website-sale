@@ -11,7 +11,7 @@ export default function HeaderComponent() {
             <div className="header">
                 <div className="container">
                     <div className="top-header">
-                        <div style={{width: '400px'}}></div>
+                        <div style={{width: '200px'}}></div>
                         <div className="header-logo">
                             <img src={logoData} alt="" />
                         </div>

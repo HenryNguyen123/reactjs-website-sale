@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
+    border-bottom: 1px solid rgb(138, 56, 56);
 }
 
 .header .container .top-header .header-logo img {
@@ -31,10 +32,29 @@
 
 /* header-menu */
 
+
+.header .container .header-menu {
+    /* background-color: rgb(65, 50, 61); */
+    border-bottom: 1px solid rgb(138, 56, 56);
+    /* margin-top: -15px; */
+}
 .header .container .header-menu .header-list-menu ul {
     display: flex;
+    /* padding: 10px 0px; */
 }
 
-.header .container .header-menu .header-list-menu ul li {
-    margin-right: 30px;
+.header .container .header-menu .header-list-menu ul li a {
+    margin-right: 20px;
+    font-size: 18px;
+    padding: 10px 5px;
+    font-weight: 600;
+    color: #333
+}
+
+.header .container .header-menu .header-list-menu ul li a:hover {
+    padding: 10px 5px;
+    color:#fff;
+    background-color: #6c2121;
+    border-radius: 10px;
+    animation: anima 0.5s ease 0.3s;
 }

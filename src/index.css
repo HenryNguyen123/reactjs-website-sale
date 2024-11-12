@@ -1,7 +1,13 @@
 
+* {
+    margin: 0xp;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 .container {
     width: 85%;
+    margin: 0px auto;
 }
 
 a {
@@ -10,4 +16,13 @@ a {
 
 li {
     list-style: none;
+}
+
+@keyframes anima {
+    to {
+        opacity: 0.8;
+    }
+    from {
+        opacity: 1;
+    }
 }
