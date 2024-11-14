@@ -57,3 +57,34 @@ export const categoriesData = [
         api: 'https://672ea4e9229a881691f09001.mockapi.io/day_da_dong_ho'
     }
 ]
+
+export const sliderImg = [
+    {
+        name: 'Seiko',
+        image: 'https://lh3.googleusercontent.com/pw/AP1GczMdspMSSsYpYz31F9badhN-xkwgXjEk7T8b-mEzu7WBDA22-SGT-bMG3UITcZeOAdEoDmBe-8Adf9c7rb_sTGiHF-iw7cBOOHZgwIm8TDeYAYkXCi2QdBsqKLk_7rr3h6W0AyAgu19LR_bB5Ld3Xn-Z=w2048-h596-s-no?authuser=0'
+    },
+    {
+        name: 'Đồng Hồ Nam',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2023/09/T006.407.16.033.00-1.jpg',
+    },
+    {
+        name: 'Đồng Hồ Nữ',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2023/09/DW00100431_1.jpg'
+    },
+    {
+        name: 'Trang Sức',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2023/09/00155-SVSV-XL-00155-LGLG-XL-00149-SVBL-SL-00149-RGBL-SL-00150-SVBL-XLA-3.jpg'
+    },
+    {
+        name: 'Ví da',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2023/09/MSMVM0102010212-MSMVM0102011412-MSMVM0102010412-4.jpg'
+    },
+    {
+        name: 'Đồng Hồ Đôi',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2024/07/D171TCXD172TCX.jpg'
+    },
+    {
+        name: 'Dây Da Đồng Hồ',
+        image: 'https://image.donghohaitrieu.com/wp-content/uploads/2023/09/Lucca-0.jpg'
+    }
+]

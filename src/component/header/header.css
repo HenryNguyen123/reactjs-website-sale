@@ -1,5 +1,16 @@
+.header {
+    position: relative;
+    background-color: white;
+    z-index: 999999;
+}
+.header .container .position{
+    position: fixed;
+    width: 85%;
+    background-color: white;
+    top: 0;
+    z-index: 999999;
 
-
+}
 
 /* top-header */
 .header .container .top-header {
@@ -34,13 +45,20 @@
 
 
 .header .container .header-menu {
+    /* position: sticky;
+    position: -webkit-sticky;
+    width: 85%;
+    background-color: white;
+    top: 70px;
+    z-index: 999999; */
     /* background-color: rgb(65, 50, 61); */
     border-bottom: 1px solid rgb(138, 56, 56);
     /* margin-top: -15px; */
 }
 .header .container .header-menu .header-list-menu ul {
     display: flex;
-    /* padding: 10px 0px; */
+    padding: 10px 0px;
+    margin: -3px 0px;
 }
 
 .header .container .header-menu .header-list-menu ul li a {
@@ -52,7 +70,7 @@
 }
 
 .header .container .header-menu .header-list-menu ul li a:hover {
-    padding: 10px 5px;
+    /* padding: 10px 5px; */
     color:#fff;
     background-color: #6c2121;
     border-radius: 10px;

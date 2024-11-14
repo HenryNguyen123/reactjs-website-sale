@@ -1,0 +1,28 @@
+.slider {
+    background-color: #a5a0a0;
+    padding: 10px;
+}
+
+.slider .container .slider-container {
+    margin: 30px 0px;
+}
+
+.slider .container .slider-container #slider-height {
+    height: 550px;
+}
+
+.slider .container .slider-container #slider-height img {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.slider .container .slider-container #slider-height .slider-title h5 {
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.5;
+}

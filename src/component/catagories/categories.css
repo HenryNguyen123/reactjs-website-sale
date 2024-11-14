@@ -1,0 +1,15 @@
+
+
+.categories .container .cate-title {
+    margin-top: 30px;
+    margin-bottom: -20px;
+}
+.categories .container .cate-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categories .container .cate-products .item {
+    margin-right: 10px;
+    margin-top: 20px;
+}
