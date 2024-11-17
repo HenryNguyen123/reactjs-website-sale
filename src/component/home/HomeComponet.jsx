@@ -37,6 +37,8 @@ export default function HomeComponet () {
                 </div>
             </div>
             
+            
+
             <Slider></Slider>
 
             {

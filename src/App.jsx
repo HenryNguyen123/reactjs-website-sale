@@ -7,11 +7,15 @@ import CategoriesComponent from './component/catagories/CategoriesComponent'
 import ProductsComponent from './component/products/ProductsComponent'
 import CartComponent from './component/cart/CartComponent'
 import SearchComponent from './component/search/SearchComponent'
+import ToastNoticed from './component/toastNoticed/ToastNoticed'
 
 function App() {
 
   return (
     <>
+      {/* <div className="toast"> */}
+        <ToastNoticed></ToastNoticed>
+      {/* </div> */}
       <Routes>
           <Route path='/' element={<LayoutComponent/>}>
             <Route index element={<HomeComponet/>}/>
@@ -22,6 +26,8 @@ function App() {
             {/* <Route path='/product/:id/:name' element={<HomeComponet/>}/> */}
           </Route>
       </Routes>
+
+      
     </>
   )
 }

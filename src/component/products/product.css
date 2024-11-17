@@ -35,8 +35,9 @@
 
 .product .container .product-container .quantity p .desc,
 .product .container .product-container .quantity p .plus {
-    padding: 5px 10px;
+    padding: 5px 15px;
     border: 1px solid black;
+    cursor: pointer;
 }
 
 .product .container .product-container .quantity p .number {
@@ -62,6 +63,23 @@
     font-size: 18px;
     font-weight: 600;
     color: #fff;
+    border: 1px solid #F05D40;
+}
+
+.product .container .product-container .price-button button:hover {
+    background-color: #FFF5F1;
+    color: #F05D40;
+}
+
+.product .container .product-container .price-button .buy-now {
+    padding: 5px 30px;
+    border-radius: 20px;
+    background-color: #facec5;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    width: 12.5rem;
+    color: #F05D40;
     border: 1px solid #F05D40;
 }
 

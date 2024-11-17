@@ -1,0 +1,13 @@
+
+
+.toast {
+    position: relative;
+    z-index: 999999;
+}
+
+.toast .toast-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+}

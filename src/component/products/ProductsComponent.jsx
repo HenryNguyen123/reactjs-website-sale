@@ -15,8 +15,10 @@ export default function ProductsComponent() {
     const [showStar, setShowStar] = useState(false)
     const [data, setData] = useState([])
     const [listData, setListdata] = useState([])
+    const [quantity, setQuantity] = useState(1)
 
-    const {getDataProduct, getListDataProducts} = useContext(Context)
+
+    const {getDataProduct, getListDataProducts, handleAddToCart, handleToCart} = useContext(Context)
 
 
     useEffect(() => {
@@ -40,6 +42,19 @@ export default function ProductsComponent() {
     useEffect(() =>{
         window.scrollTo(0, 0)
     }, [location])
+
+    const handleOnclickDesc = () => {
+        setQuantity(()=>{
+            if (quantity <= 1 ){
+                return 1
+            } 
+            return quantity -1
+        })
+    }
+
+    const handleOnclickPlus = () => {
+        setQuantity( quantity + 1)
+    }
 
     const handleOnsubmit = (e) => {
         e.preventDefault()
@@ -72,9 +87,9 @@ export default function ProductsComponent() {
                             </div>
                             <div className="quantity">
                                 <p>
-                                    <span className="desc">-</span>
-                                    <span className="number">1</span>
-                                    <span className="plus">+</span>
+                                    <span className="desc" onClick={handleOnclickDesc}>-</span>
+                                    <span className="number">{quantity}</span>
+                                    <span className="plus" onClick={handleOnclickPlus}>+</span>
                                 </p>
                             </div>
                             <div className="price-button">
@@ -82,7 +97,8 @@ export default function ProductsComponent() {
                                     <span className="price">Price: </span>
                                     <span className="number">{VND.format(data.price)}</span>
                                 </p>
-                                <button>Add To Cart</button>
+                                <button onClick={() => handleAddToCart( data , quantity)}>Add To Cart</button>
+                                <button className="buy-now" onClick={() => handleToCart( data , quantity)}>Buy Now</button>
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,7 @@
 .header {
     position: relative;
-    background-color: white;
-    z-index: 999999;
 }
+
 .header .container .position{
     position: fixed;
     width: 85%;
@@ -39,6 +38,21 @@
     padding: 5px 10px;
     width: 200px;
     border-radius: 20px;
+}
+
+.header .container .top-header .header-right .cart {
+    display: flex;
+    margin: auto 0px;
+}
+
+.header .container .top-header .header-right .cart .cart-right span{
+    /* margin-left: 5px; */
+    font-size: 12px;
+    font-weight: 550;
+    padding: 1px 3px;
+    background-color: rgb(236, 159, 150);
+    border-radius: 10px;
+    color: #4d050b;
 }
 
 /* header-menu */
