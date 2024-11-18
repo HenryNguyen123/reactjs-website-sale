@@ -8,6 +8,7 @@ import ProductsComponent from './component/products/ProductsComponent'
 import CartComponent from './component/cart/CartComponent'
 import SearchComponent from './component/search/SearchComponent'
 import ToastNoticed from './component/toastNoticed/ToastNoticed'
+import LocalStorage from './component/localStorage/LocalStorage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/product/:id/:name' element={<ProductsComponent/>}/>
             <Route path='/cart' element={<CartComponent/>}/>
             <Route path='/search' element={<SearchComponent/>}/>
+            <Route path='/localStorage' element={<LocalStorage/>}/>
             {/* <Route path='/product/:id/:name' element={<HomeComponet/>}/> */}
           </Route>
       </Routes>

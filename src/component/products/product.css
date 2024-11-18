@@ -57,12 +57,12 @@
 }
 
 .product .container .product-container .price-button button {
-    padding: 5px 30px;
-    border-radius: 20px;
-    background-color: #F05D40;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: #facec5;
     font-size: 18px;
     font-weight: 600;
-    color: #fff;
+    color: #F05D40;
     border: 1px solid #F05D40;
 }
 
@@ -72,14 +72,14 @@
 }
 
 .product .container .product-container .price-button .buy-now {
-    padding: 5px 30px;
-    border-radius: 20px;
-    background-color: #facec5;
+    padding: 10px 40px;
+    border-radius: 30px;
+    background-color: #F05D40;
     font-size: 18px;
     font-weight: 600;
-    margin-left: 20px;
-    width: 12.5rem;
-    color: #F05D40;
+    margin-left: 10px;
+    width: 17.5rem;
+    color: #fff;
     border: 1px solid #F05D40;
 }
 

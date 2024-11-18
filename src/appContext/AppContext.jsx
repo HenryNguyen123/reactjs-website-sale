@@ -25,6 +25,8 @@ export default function AppContext ({children}) {
     const [cartItems, SetCartItems] = useState([])
     const [cartSubTotal, setCartSubTotal] = useState(0)
     const [cartCount, setCartCount] = useState(0)
+    const [showNotication, setShowNotication] = useState(true);
+
 
     useEffect(() => {
         let count = 0
@@ -107,6 +109,7 @@ export default function AppContext ({children}) {
         cartItems, SetCartItems,
         cartSubTotal, setCartSubTotal,
         cartCount, setCartCount,
+        showNotication, setShowNotication,
         handleAddToCart,
         handleUpdateToCart,
         handleDeleteCart,

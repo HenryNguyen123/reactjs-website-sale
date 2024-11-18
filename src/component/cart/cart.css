@@ -51,8 +51,32 @@
 }
 
 
+.cart .container .cart-flex .cart-left form .button {
+    width: 100%;
+    padding: 5px 0px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #F05D40;
+    color: #fff;
+    border: 1px solid #F05D40;
+}
+
+.cart .container .cart-flex .cart-left form .button:hover {
+    background-color: #ffd1c8;
+    color: #F05D40;
+}
 
 
+.cart .container .cart-flex .cart-right .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart .container .cart-flex .cart-right .total h5 {
+    font-weight: 550;
+}
 
 
 

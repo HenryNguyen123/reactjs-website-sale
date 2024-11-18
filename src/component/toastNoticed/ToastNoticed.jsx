@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button, Col, Row, Toast } from "react-bootstrap";
 // import Toast from 'react-bootstrap/Toast';
 import './toast.css'
+import { Context } from "../../appContext/AppContext";
 // import styled from 'styled-components';
 
 // const DivParent = styled.div`
@@ -16,7 +17,7 @@ import './toast.css'
 
 
 export default function ToastNoticed () {
-    const [showNotication, setShowNotication] = useState(true);
+    const {showNotication, setShowNotication} = useContext(Context)
 
     useEffect(() => {
         setTimeout(() => {

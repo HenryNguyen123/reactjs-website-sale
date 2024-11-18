@@ -26,3 +26,7 @@ li {
         opacity: 1;
     }
 }
+
+.color-red {
+    color: red;
+}

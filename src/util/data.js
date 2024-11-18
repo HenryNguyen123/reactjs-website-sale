@@ -12,6 +12,10 @@ export const listMenu = [
     {
         link: '/product/:id/:name',
         name: 'Product'
+    },
+    {
+        link: '/localStorage',
+        name: 'showLocal'
     }
 
 ]

@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Context } from "../../appContext/AppContext"
 import CartItem from "./CartItem"
 import { useNavigate } from "react-router"
+import { VND } from "../../util/convert"
 
 
 
@@ -14,17 +15,18 @@ export default function CartComponent () {
     const [address, setAddress] = useState('')
     const [city, setCity] = useState('')
     const [request, setRequest] = useState('')
-    const {cartItems,SetCartItems, cartSubTotal} = useContext(Context)
+
+    const {cartItems,SetCartItems, cartSubTotal, setShowNotication} = useContext(Context)
 
     // tạo localstoryge
-    var historyProducts = localStorage.getItem("historyBuyProducts---")
+    var historyProducts = localStorage.getItem("historyBuyProducts")
     var custumerBuyProduct = historyProducts ? JSON.parse(historyProducts) : []
 
     // lịch sử mua hàng
     const [history, setHistory] = useState(custumerBuyProduct)
 
     useEffect(() => {
-        localStorage.setItem("historyBuyProducts---", JSON.stringify(history))
+        localStorage.setItem("historyBuyProducts", JSON.stringify(history))
     }, [history])
 
     var products = []
@@ -35,8 +37,6 @@ export default function CartComponent () {
             price: cartItems[i].price,
             total: cartItems[i].price * cartItems[i].quantity
         }
-        console.log('quantity: cartItems[i].quantity: ' + cartItems[i].quantity)
-        console.log('cartItems.length: ' + cartItems.length)
         products.push(product)
     }
 
@@ -64,8 +64,6 @@ export default function CartComponent () {
         if (!history.includes(custumerLocal)) {
             setHistory((data) => [...data, custumerLocal])
         }
-        console.log('quantity: cartItems[i].quantity: ' + history)
-        console.log('custumerLocal ' + products[0].total)
 
         SetCartItems([])
 
@@ -73,6 +71,8 @@ export default function CartComponent () {
         setTimeout(() => {
             navigate('/')  
         }, 300);
+
+        setShowNotication(true)
     }
 
 
@@ -107,16 +107,27 @@ export default function CartComponent () {
                                 </div>
                                 
                                 <br />
-                                <button type="submit">Buy Now</button>
+                                <button className="button" type="submit">Buy Now</button>
                             </form>
                         </div>
                         <div className="cart-right">
                             {
-                                cartItems?.length > 0 && cartItems?.map((value, key) => (
-                                    <div key={key} className="cart-products">
-                                        <CartItem data={value}></CartItem>
+                                cartItems?.length > 0 && (
+                                    <div>
+                                        {
+                                            cartItems?.map((value, key) => (
+                                                <div key={key} className="cart-products">
+                                                    <CartItem data={value}></CartItem>
+                                                </div>
+                                            ))
+                                        }
+                                        <div className="total">
+                                            <div><h5>Total:</h5></div>
+                                            <div><h5 className="color-red">{VND.format(cartSubTotal)}</h5></div> 
+                                        </div>
+
                                     </div>
-                                ))
+                                )
                             }
 
                         </div>

@@ -1,0 +1,125 @@
+
+.local {
+    position: relative;
+}
+
+.local .container .local-container {
+    margin-left: -25px;
+}
+
+.local .container .local-container .local-title {
+    margin: 0px auto;
+}
+
+.local .container .local-container .local-title ul {
+    display: flex;
+    
+    margin-top: 1.875rem;
+}
+
+.local .container .local-container .local-title ul li {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(113, 181, 190);
+    color: #fff;
+}
+
+.local .container .local-container .local-item ul {
+    display: flex;
+    margin-top: -1.063rem;
+}
+
+.local .container .local-container .local-item ul li {
+    width: 10rem;
+    border: 1px solid black;
+    padding: 0.313rem;
+}
+
+.local .container .local-container .local-item ul .button {
+
+    text-align: center;
+}
+
+.local .container .local-container .local-item ul .button button{
+    /* margin: auto 0px; */
+    /* height: 100%; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #390CED;
+    border: 1px solid #390CED;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.local .container .local-container .local-item ul .button button:hover {
+    opacity: 0.7;
+}
+
+
+/* products */
+
+.show-local {
+    position: absolute;
+    background-color: rgba(117, 114, 114, 0.5);
+    z-index: 99999;
+    top: 20%;
+    width: 100%;
+    padding: 3.125rem;
+}
+
+/* .show-local .container .products {
+    position: absolute;
+    background-color: white;
+    z-index: 99999;
+    top: 20%;
+    right: 30%;
+} */
+
+.show-local .container .products  {
+    width: 43.75rem;
+    padding: 1.875rem;
+    border-radius: 1.25rem;
+    margin-left: 8.75rem;
+    border: 1px solid black;
+    background-color: white;
+    z-index: 999999;
+}
+
+
+.show-local .container .products .products-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+}
+
+.show-local .container .products .products-header .close h4 {
+    /* padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 20px; */
+}
+
+.show-local .container .products .products-title ul {
+    display: flex;
+}
+
+.show-local .container .products .products-title ul li {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.show-local .container .products .products-item ul {
+    display: flex;
+}
+
+.show-local .container .products .products-item ul li {
+    width: 10rem;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: -1.063rem;
+}
