@@ -7,7 +7,7 @@ import ItemProduct from "./ItemProduct"
 import { Context } from "../../appContext/AppContext"
 import { VND } from "../../util/convert"
 import { useLocation } from "react-router"
-
+import { IoCloseSharp } from "react-icons/io5"
 
 
 export default function ProductsComponent() {
@@ -16,6 +16,8 @@ export default function ProductsComponent() {
     const [data, setData] = useState([])
     const [listData, setListdata] = useState([])
     const [quantity, setQuantity] = useState(1)
+
+    const [showImage, setShowImage] = useState(false)
 
 
     const {getDataProduct, getListDataProducts, handleAddToCart, handleToCart} = useContext(Context)
@@ -69,18 +71,57 @@ export default function ProductsComponent() {
 
     }
 
+    // const indexImage = data.image.indexOf(item => item.id === data.image.id )
+    const [firstImage, setFirstImage] = useState('')
+    const [listFilterImage, setListFilterImage] = useState([])
+    const handleImage = () => {
+        for (let i = 0; i< data?.image?.length; i++) {
+            let firstImg = data?.image?.[0].img
+            setFirstImage(firstImg)
+            // if (firstImg) {
+            let filterImage = data?.image?.filter(item => item.img !== firstImg)
+            setListFilterImage(filterImage)
+            // }
+        }
+    }
+
+    const handleOncickImg = (imgItem) => {
+        // for (let i = 0; i< data?.image?.length; i++) {
+            let filterImage = data?.image?.filter(item => item.img !== imgItem.img)
+            setListFilterImage(filterImage)
+            setFirstImage(imgItem.img)
+
+        // }
+    }
+
+    useEffect(() => {
+        handleImage()
+    }, [data])
+
+
+
     return (
         <>
             <div className="product">
                 <div className="container">
                     <div className="product-container">
                         <div className="image">
-                            <img src={data.image} alt={data.name} />
+                            <img src={firstImage} alt={data.name} onClick={() => setShowImage(true)}/>
+                            <div className="fiter-img">
+                                {
+                                    listFilterImage?.length > 0 && listFilterImage.map((value, key) => (
+                                        <div key={key} className="image-item" onClick={() => handleOncickImg(value)}>
+                                            <img src={value.img} alt="" />
+                                        </div>
+                                    
+                                    ))
+                                }
+                            </div>
                         </div>
                         <div className="product-content">
                             <div className="product-infor">
                                 <h4><Badge bg="primary">{data.name}</Badge></h4>
-                                <p><Badge pill bg="secondary">Detail</Badge><span> {data.description}</span></p>
+                                <p><Badge pill bg="secondary">Detail</Badge><span> {data.detail}</span></p>
                             </div>
                             <div className="product-star">
                                 <p onClick={handleStar}>Đánh giá: <span>{star}<FaStar /></span></p>
@@ -103,15 +144,34 @@ export default function ProductsComponent() {
                         </div>
                     </div>
 
+                    <div className="product-detail">
+                        <div className="product-detail-title">
+                            <h4>PRODUCT DETAILs</h4>
+                        </div>
+                        <div className="product-detail-text">
+                            <p>{data.detail}</p>
+                            <p className="strong">{data.description}</p>
+                        </div>
+                    </div>
+
                     <div className="title-text">
                         <h3><Badge bg="secondary">Sản phẩm liên quan</Badge></h3>
+                    </div>
+
+
+                    <div className="product-desc">
+                        <div className="product-desc-item">
+                            <div className="img">
+                                <img src="" alt="" />
+                            </div>
+                        </div>
                     </div>
 
                     <div className="products-list">
                         {
                             filters?.length > 0 && filters?.map((value, key) => (
                                 <div className="product-list-item" key={key}>
-                                    <ItemProduct data={value} listDataProducts={listData}></ItemProduct>
+                                    <ItemProduct data={value} listDataProducts={listData} setQuantity={setQuantity}></ItemProduct>
                                 </div>
                             ))
                         }
@@ -127,6 +187,38 @@ export default function ProductsComponent() {
                         <button type='submit'>Đánh giá sản phẩm</button>
                     </form>
                 </div>)
+            }
+
+            {
+                showImage && (
+                    <div className="show-image">
+                        <div className="container">
+                            <div className="image">
+                                <div className="title">
+                                    <div></div>
+                                    <div className="img">
+                                        <img className="img-master" src={firstImage} alt={data.name} />
+                                        <div className="fiter-img">
+                                            {
+                                                listFilterImage?.length > 0 && listFilterImage.map((value, key) => (
+                                                     <div key={key} className="image-item" onClick={() => handleOncickImg(value)}>
+                                                        <img src={value.img} alt={value.name} />
+                                                    </div>
+                                               
+                                               ))
+                                            }
+                                        </div>
+                                    </div>
+                                    <div className="close" onClick={() => setShowImage(false)}>
+                                        <p><IoCloseSharp /></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                )
             }
 
         </>

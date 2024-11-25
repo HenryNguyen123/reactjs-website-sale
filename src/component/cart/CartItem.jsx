@@ -19,7 +19,7 @@ export default function CartItem ({data}) {
         <>
             <div className="item">
                 <div className="cart-item">
-                    <img src={data.image} alt={data.name} onClick={() => {
+                    <img src={data?.image?.[0]?.img} alt={data.name} onClick={() => {
                                     navigate(`/product/${data.id}/${data.name}`)
                                     setGetDataProduct(data)
                                 }}/>

@@ -12,6 +12,8 @@ export const Context = createContext()
 export default function AppContext ({children}) {
 
     const navigate = useNavigate()
+    // search menu
+    const [getsearch, setGetSearch] = useState('')
 
     // lấy data từ list-category
     const [idCategory, setIdCategory] = useState([])
@@ -102,6 +104,7 @@ export default function AppContext ({children}) {
     }
 
     return <Context.Provider value={{
+        getsearch, setGetSearch,
         idCategory, setIdCategory,
         getDataProduct, setGetDataProduct,
         getListDataProducts, setGetListDataProducts,

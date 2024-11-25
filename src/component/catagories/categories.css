@@ -1,8 +1,9 @@
 
 
 .categories .container .cate-title {
-    margin-top: 30px;
+    margin-top: 4%;
     margin-bottom: -20px;
+    border-bottom: 1px solid #333;
 }
 .categories .container .cate-products {
     display: flex;
@@ -10,6 +11,10 @@
 }
 
 .categories .container .cate-products .item {
-    margin-right: 10px;
+    margin-right: 24px;
     margin-top: 20px;
+}
+
+.categories .container .cate-products .item:nth-child(4) {
+    margin-right: none;
 }

@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
     height: 70px;
-    border-bottom: 1px solid rgb(138, 56, 56);
+    /* border-bottom: 1px solid rgb(138, 56, 56); */
 }
 
 .header .container .top-header .header-logo img {
@@ -42,7 +42,11 @@
 
 .header .container .top-header .header-right .cart {
     display: flex;
-    margin: auto 0px;
+    margin: auto 10px;
+}
+
+.header .container .top-header .header-right .cart .cart-left {
+    cursor: pointer;
 }
 
 .header .container .top-header .header-right .cart .cart-right span{
@@ -67,8 +71,13 @@
     z-index: 999999; */
     /* background-color: rgb(65, 50, 61); */
     border-bottom: 1px solid rgb(138, 56, 56);
-    /* margin-top: -15px; */
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+    opacity: 0.8;
+    border-radius: 5px;
 }
+
 .header .container .header-menu .header-list-menu ul {
     display: flex;
     padding: 10px 0px;
@@ -80,13 +89,53 @@
     font-size: 18px;
     padding: 10px 5px;
     font-weight: 600;
-    color: #333
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
 }
 
 .header .container .header-menu .header-list-menu ul li a:hover {
-    /* padding: 10px 5px; */
-    color:#fff;
-    background-color: #6c2121;
+    /* padding: 5px 5px; */
+    color:#F4A460;
+    /* background-color: #6c2121; */
     border-radius: 10px;
     animation: anima 0.5s ease 0.3s;
+    box-sizing: padding-box;
+    opacity: 1;
+}
+
+.header .container .header-menu .icon-menu {
+    display: flex;
+}
+
+.header .container .header-menu .icon-menu .find {
+    /* margin: 5px 20px 0px 0px; */
+    display: flex;
+    margin: auto 10px;
+}
+
+.header .container .header-menu .icon-menu .find .search {
+    margin-right: 10px;
+}
+
+.header .container .header-menu .icon-menu .find .search input {
+    border-radius: 5px;
+    padding: 1px 5px;
+    background-color: #e7e7e7;
+}
+
+.header .container .header-menu .icon-menu .find span{ 
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.header .container .header-menu .icon-menu .cart {
+    display: flex;
+    margin-left: 30px;
+}
+
+.header .container .header-menu .icon-menu .cart .cart-left span,
+.header .container .header-menu .icon-menu .cart .cart-right span {
+    color: #fff;
 }

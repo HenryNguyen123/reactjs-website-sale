@@ -1,14 +1,15 @@
 .slider {
-    background-color: #a5a0a0;
+    /* background-color: #a5a0a0; */
     padding: 10px;
 }
 
 .slider .container .slider-container {
-    margin: 30px 0px;
+    margin: 10px 0px;
+    cursor: pointer;
 }
 
 .slider .container .slider-container #slider-height {
-    height: 550px;
+    height: 700px;
 }
 
 .slider .container .slider-container #slider-height img {
@@ -19,10 +20,10 @@
 
 .slider .container .slider-container #slider-height .slider-title h5 {
     padding: 5px 10px;
-    background-color: black;
+    background-color: rgb(81, 78, 78);
     border-radius: 10px;
     font-size: 20px;
     font-weight: 600;
     color: #fff;
-    opacity: 0.5;
+    opacity: 0.8;
 }

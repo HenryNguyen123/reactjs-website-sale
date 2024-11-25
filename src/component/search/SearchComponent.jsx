@@ -11,13 +11,18 @@ export default function SearchComponent () {
 
     const navigate = useNavigate()
 
+    const {setGetDataProduct, setGetListDataProducts, getsearch} = useContext(Context)
+
+
     const [search, setSearch] = useState('')
     const [searchDebounce, setSearchDebounce] = useState('')
     const [listProducts, setListProducts] = useState([])
     const [listGetSearch, setListGetSearch] = useState([])
     const [addProducts, setAddProducts] = useState([])
 
-    const {setGetDataProduct, setGetListDataProducts} = useContext(Context)
+    useEffect(() => {
+        setSearch(getsearch)
+    }, [getsearch])
 
     useEffect(() => {
 
@@ -55,15 +60,7 @@ export default function SearchComponent () {
         for (let i = 0; i < listProducts.length; i++) {
             listProducts[i].map((item) => {
                 let itemSearch = item.name.toLocaleLowerCase() == nameSearch || item.title.toLocaleLowerCase() == nameSearch || item.price == nameSearch
-                
-                
-                // let numberIndex = (item.name.toLocaleLowerCase()).indexOf(search)
-                // if (numberIndex >= 0 && nameSearch != '') {
-                //     let index = items.filter(value => value.name != item.name)
-                //     items = [...items, item]
-                //     setListGetSearch(items)
-                //     return dem +=1
-                // }
+                let numberIndex = (item.name.toLocaleLowerCase()).indexOf(search)
 
                 if (itemSearch) {
                     items = [...items, item]
@@ -72,6 +69,23 @@ export default function SearchComponent () {
                     setAddProducts(list)
                     return dem +=1
                 }
+                
+                
+                // if (numberIndex >= 0 && nameSearch != '' && !itemSearch) {
+                //     let index = items.findIndex(value => value.name == item.name)
+                //     let product = items.filter(value => value.name != item.name)
+                //     items = [...items, item]
+                //     if (index >= 0) {
+                //         // setListGetSearch([])
+                //         items = [...items, product]
+                //         return items
+                //     } else {
+                //         setListGetSearch([])
+                //     }
+                //     setListGetSearch(items)
+                //     return dem +=1
+                // }
+
             })
         }
 
@@ -108,7 +122,7 @@ export default function SearchComponent () {
                             {
                                 listGetSearch.map((value, key) => (
                                     <div className="search-products" key={key}>
-                                        <img src={value.image} alt={value.name} onClick={() => handlOnclickImage(value, key)}/>
+                                        <img src={value?.image?.[0]?.img} alt={value.name} onClick={() => handlOnclickImage(value, key)}/>
                                         <div className="text">
                                             <h5>{value.name}</h5>
                                             <p>detail: {value.description}</p>

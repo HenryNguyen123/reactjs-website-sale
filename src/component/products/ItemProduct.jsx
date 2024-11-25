@@ -10,11 +10,13 @@ import { useNavigate } from 'react-router';
 
 ItemProduct.propTypes = {
     data: PropTypes.object,
-    listDataProducts: PropTypes.array
+    listDataProducts: PropTypes.array,
+    setQuantity: PropTypes.array
+
 }
 
 
-export default function ItemProduct ({data, listDataProducts}) {
+export default function ItemProduct ({data, listDataProducts, setQuantity}) {
 
     const navigate = useNavigate()
     const {setGetDataProduct, setGetListDataProducts} = useContext(Context)
@@ -22,6 +24,10 @@ export default function ItemProduct ({data, listDataProducts}) {
     const handleOnclickProduct = () => {
         setGetDataProduct(data)
         setGetListDataProducts(listDataProducts)
+        setTimeout(() => {
+            setQuantity(1)
+            
+        }, 100);
         navigate(`/product/${data.id}/${data.name}`)
     }
     
@@ -32,11 +38,11 @@ export default function ItemProduct ({data, listDataProducts}) {
                 <div className="product-item-container">
                     <div className="product-class">
                         <div className="image">
-                            <img src={data.image} alt={data.title} />
+                            <img src={data?.image?.[0]?.img} alt={data.title} />
                         </div>
                         <div className="product-content">
-                            <h4><Badge bg="primary">{data.name}</Badge></h4>
-                            <p><Badge pill bg="secondary">Detail</Badge><span> {data.description}</span></p>
+                            <h4>{data.name.slice(0,28)}</h4>
+                            <p><Badge pill bg="secondary">Detail</Badge><span> {data.detail.slice(0,160)+ '...'}</span></p>
                         </div>
                         <div className="price">
                             <p>

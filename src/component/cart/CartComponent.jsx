@@ -70,7 +70,7 @@ export default function CartComponent () {
         // tạo khoảng thời gian để có thể lưu trữ vào localstorage trước khi chuyển trang
         setTimeout(() => {
             navigate('/')  
-        }, 300);
+        }, 100);
 
         setShowNotication(true)
     }
@@ -89,7 +89,7 @@ export default function CartComponent () {
                                     <h4>Thông tin khách hàng</h4>
                                     <input type="text" name='name' id='name' value={name} required placeholder="Full Name" onChange={(e) => setName(e.target.value)} /> <br />
                                     <input type="text" name="phone" id='phone' value={phone} required placeholder="Your Phone" onChange={(e) => setPhone(e.target.value)} /> <br />
-                                    <input type="email" name="email" id='email' value={email}  placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+                                    <input type="email" name="email" id='email' value={email} required placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
                                 </div>
  
                                 <div className="deliver">
