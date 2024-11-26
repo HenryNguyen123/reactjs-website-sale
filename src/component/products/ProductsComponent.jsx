@@ -110,8 +110,8 @@ export default function ProductsComponent() {
                             <div className="fiter-img">
                                 {
                                     listFilterImage?.length > 0 && listFilterImage.map((value, key) => (
-                                        <div key={key} className="image-item" onClick={() => handleOncickImg(value)}>
-                                            <img src={value.img} alt="" />
+                                        <div key={key} className="fiter-img" onClick={() => handleOncickImg(value)}>
+                                            <img style={{width:"70px"}} src={value.img} alt="" />
                                         </div>
                                     
                                     ))
@@ -120,7 +120,7 @@ export default function ProductsComponent() {
                         </div>
                         <div className="product-content">
                             <div className="product-infor">
-                                <h4><Badge bg="primary">{data.name}</Badge></h4>
+                                <h4>{data.name}</h4>
                                 <p><Badge pill bg="secondary">Detail</Badge><span> {data.detail}</span></p>
                             </div>
                             <div className="product-star">
@@ -156,15 +156,6 @@ export default function ProductsComponent() {
 
                     <div className="title-text">
                         <h3><Badge bg="secondary">Sản phẩm liên quan</Badge></h3>
-                    </div>
-
-
-                    <div className="product-desc">
-                        <div className="product-desc-item">
-                            <div className="img">
-                                <img src="" alt="" />
-                            </div>
-                        </div>
                     </div>
 
                     <div className="products-list">

@@ -25,7 +25,7 @@ export default function CartItem ({data}) {
                                 }}/>
                     <div className="cart-title">
                         <p className="name">{data.name}</p>
-                        <p>{VND.format(data.price)}</p>
+                        <p>Price: {VND.format(data.price)}</p>
                     </div>
                 </div>
                 <div className="cart-quantity">

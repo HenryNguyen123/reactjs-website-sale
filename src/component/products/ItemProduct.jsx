@@ -42,11 +42,11 @@ export default function ItemProduct ({data, listDataProducts, setQuantity}) {
                         </div>
                         <div className="product-content">
                             <h4>{data.name.slice(0,28)}</h4>
-                            <p><Badge pill bg="secondary">Detail</Badge><span> {data.detail.slice(0,160)+ '...'}</span></p>
+                            <p><Badge pill bg="secondary">Detail</Badge><span> {data.detail.slice(0,100)+ '...'}</span></p>
                         </div>
                         <div className="price">
                             <p>
-                                <span className='price-font'>Giá: </span>
+                                <span className='price-font'>Price: </span>
                                 <span className='number'>{VND.format(data.price)}</span>
                             </p>
                         </div>

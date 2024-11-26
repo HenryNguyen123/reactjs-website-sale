@@ -60,7 +60,7 @@ export default function SearchComponent () {
         for (let i = 0; i < listProducts.length; i++) {
             listProducts[i].map((item) => {
                 let itemSearch = item.name.toLocaleLowerCase() == nameSearch || item.title.toLocaleLowerCase() == nameSearch || item.price == nameSearch
-                let numberIndex = (item.name.toLocaleLowerCase()).indexOf(search)
+                // let numberIndex = (item.name.toLocaleLowerCase()).indexOf(search)
 
                 if (itemSearch) {
                     items = [...items, item]
@@ -125,7 +125,7 @@ export default function SearchComponent () {
                                         <img src={value?.image?.[0]?.img} alt={value.name} onClick={() => handlOnclickImage(value, key)}/>
                                         <div className="text">
                                             <h5>{value.name}</h5>
-                                            <p>detail: {value.description}</p>
+                                            {/* <p>detail: {value.description}</p> */}
                                             <h5 className="color-red">price: {VND.format(value.price)}</h5>
                                         </div>
                                     </div>

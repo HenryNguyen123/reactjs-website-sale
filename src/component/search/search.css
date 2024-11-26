@@ -2,25 +2,25 @@
 
 
 .search .container .search-container .search-text input {
-    margin: 30px 30px;
+    margin: 1.875em 1.875em;
     width: 90%;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
+    padding: 0.625em 1.25em;
+    border: 0.125em solid black;
+    border-radius: 0.625em;
 }
 
 
 .search .container .search-container .search-content .search-products {
     display: flex;
-    padding: 2px;
+    justify-content: space-evenly;
+    padding: 0.125em;
     border-bottom: 1px solid black;
     box-sizing: border-box;
-    /* justify-content: center; */
 }
 
 .search .container .search-container .search-content .search-products img {
     width: 10%;
-    margin-left: 100px;
+    margin-left: 6.25em;
     box-sizing: border-box;
     cursor: pointer;
 }
@@ -30,19 +30,49 @@
 }
 
 .search .container .search-container .search-content .search-products .text {
-    margin-right: 100px;
+    margin-right: 6.25em;
     width: 100%;
     background-color: rgba(228, 223, 223, 0.3);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 2px 4px;
+    border-top-right-radius: 1.25em;
+    border-bottom-right-radius: 1.25em;
+    padding: 0.125em 0.25em;
 }
 
 .search .container .search-container .search-content .search-products .text h5 {
     font-weight: 550;
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .search .container .search-container .search-content .search-products .text p {
-    font-size: 12px;
+    font-size: 0.75em;
+}
+
+@media screen and (max-width: 900px) {
+    /* .search .container .search-container .search-content .search-products {
+        flex-direction: column;
+    } */
+    .search .container .search-container .search-content .search-products img {
+        width: 20%;
+        height: 30%;
+        margin-left: 10px;
+    }
+    .search .container .search-container .search-content .search-products .text {
+        display: flex;
+        background-color: #fff;
+        margin-right: 100px;
+    }
+    .search .container .search-container .search-content .search-products .text h5 {
+        font-size: 10px;
+        width: 90px;
+        margin-right: 10px;
+        margin: auto 20px auto 5px;
+    }
+    .search .container .search-container .search-content .search-products .text p {
+        font-size: 10px;
+        margin: auto 0px;
+    }
+    .search .container .search-container .search-content .search-products .text .color-red {
+        margin: auto 0px;
+        font-size: 10px;
+    }
 }

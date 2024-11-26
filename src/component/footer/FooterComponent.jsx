@@ -19,10 +19,10 @@ export default function FooterComponent() {
                             <li className='footer-item'><p>Spinning</p></li>
                             <li className='footer-item'><p>Tissot</p></li>
                             <li className='footer-item'><p>Omega</p></li>
-                            <li className='footer-item'><p>Orient</p></li>
+                            {/* <li className='footer-item'><p>Orient</p></li>
                             <li className='footer-item'><p>Longines</p></li>
                             <li className='footer-item'><p>Bently</p></li>
-                            <li className='footer-item'><p>Orient</p></li>
+                            <li className='footer-item'><p>Orient</p></li> */}
                         </ul>
                     </div>
                     <div className="center-footer">
@@ -43,7 +43,7 @@ export default function FooterComponent() {
                     </div>
                     <div className="right-footer">
                         <ul className='footer-content'>
-                            <li className='footer-item'><h6>Copyright by Me SA. All rights reserved.</h6></li>
+                            <li className='footer-item'><h4>Copyright by Me SA. All rights reserved.</h4></li>
                             <li className='footer-item'><p>Terms of Use</p></li>
                             <li className='footer-item'><p>Cookie Notice</p></li>
                             <li className='footer-item'><p>Privacy Notice</p></li>
