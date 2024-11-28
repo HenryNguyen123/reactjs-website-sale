@@ -18,3 +18,12 @@
 .categories .container .cate-products .item:nth-child(4) {
     margin-right: none;
 }
+
+@media screen and (max-width: 900px) {
+    /* .categories .container .cate-products .item .product-item {
+        margin-top: -130px;
+    }
+    .categories .container .cate-products .item .product-item:nth-child(1) {
+        margin-top: 0px;
+    } */
+}

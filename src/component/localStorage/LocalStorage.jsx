@@ -45,7 +45,7 @@ export default function LocalStorage () {
                                         <li>{value.address}</li>
                                         <li>{value.city}</li>
                                         <li>{value.request}</li>
-                                        <li className="button"><button onClick={() => handleButton(value)}>Products</button></li>
+                                        <li className="button"><button onClick={() => handleButton(value)}>Show</button></li>
                                         <li>{VND.format(value.total)}</li>
                                     </ul>
                                 ))

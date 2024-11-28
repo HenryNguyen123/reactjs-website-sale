@@ -27,7 +27,7 @@ export default function AppContext ({children}) {
     const [cartItems, SetCartItems] = useState([])
     const [cartSubTotal, setCartSubTotal] = useState(0)
     const [cartCount, setCartCount] = useState(0)
-    const [showNotication, setShowNotication] = useState(true);
+    const [showNotication, setShowNotication] = useState(false);
 
 
     useEffect(() => {

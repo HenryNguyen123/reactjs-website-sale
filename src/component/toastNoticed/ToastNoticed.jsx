@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import { Button, Col, Row, Toast } from "react-bootstrap";
+import { useContext, useEffect } from "react";
+import { Toast } from "react-bootstrap";
 // import Toast from 'react-bootstrap/Toast';
 import './toast.css'
 import { Context } from "../../appContext/AppContext";
@@ -36,10 +36,10 @@ export default function ToastNoticed () {
                         className="rounded me-2"
                         alt=""
                         />
-                        <strong className="me-auto">Thông báo</strong>
-                        <small>11 mins ago</small>
+                        <strong className="me-auto">Notification</strong>
+                        <small>3 mins ago</small>
                     </Toast.Header>
-                    <Toast.Body>Đặt hàng thành công</Toast.Body>
+                    <Toast.Body>Order Successfully</Toast.Body>
                     </Toast>
 
                 {/* </div>

@@ -25,6 +25,7 @@
 .footer .container .center-footer .footer-content h4 {
     text-align: center;
     border-bottom: 1px solid #fff;
+    color: #dfe60e;
 }
 
 .footer .container .center-footer .footer-content .footer-item {
@@ -47,8 +48,8 @@
     color: #fff;
 }
 .footer .container .right-footer .footer-content .footer-item h4 {
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: #dfe60e;
+    /* border-bottom: 1px solid #fff; */
     text-align: center;
 }
 

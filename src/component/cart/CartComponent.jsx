@@ -3,6 +3,7 @@ import { Context } from "../../appContext/AppContext"
 import CartItem from "./CartItem"
 import { useNavigate } from "react-router"
 import { VND } from "../../util/convert"
+import ToastNoticed from "../toastNoticed/ToastNoticed"
 
 
 
@@ -15,8 +16,7 @@ export default function CartComponent () {
     const [address, setAddress] = useState('')
     const [city, setCity] = useState('')
     const [request, setRequest] = useState('')
-
-    const {cartItems,SetCartItems, cartSubTotal, setShowNotication} = useContext(Context)
+    const {cartItems,SetCartItems, cartSubTotal, setShowNotication, } = useContext(Context)
 
     // tạo localstoryge
     var historyProducts = localStorage.getItem("historyBuyProducts")
@@ -73,12 +73,15 @@ export default function CartComponent () {
         }, 100);
 
         setShowNotication(true)
+        setShowNotication(true)
     }
 
 
 
     return (
         <>
+            {/* <ToastNoticed></ToastNoticed> */}
+
             <div className="cart">
                 <div className="container">
                     <div className="cart-flex">
