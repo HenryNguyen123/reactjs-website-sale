@@ -2,7 +2,7 @@
 
 .categories .container .cate-title {
     margin-top: 4%;
-    margin-bottom: -1.25em;
+    /* margin-bottom: -1.25em; */
     border-bottom: 1px solid #333;
 }
 .categories .container .cate-products {
@@ -11,8 +11,8 @@
 }
 
 .categories .container .cate-products .item {
-    margin-right: 0.1em;
-    margin-top: 1.25em;
+    /* margin-right: 0.1em; */
+    /* margin-top: 1.25em; */
 }
 
 .categories .container .cate-products .item:nth-child(4) {

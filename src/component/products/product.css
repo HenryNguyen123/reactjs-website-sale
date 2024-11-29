@@ -6,7 +6,7 @@
 
 .product .container .product-container {
     display: flex;
-    margin: 1.875em auto 0px auto;
+    margin: 1em auto 0em auto;
 }
 
 .product .container .product-container .image {
@@ -132,14 +132,14 @@
 
 .product .container .products-list .product-list-item {
     /* margin-right: 0.1em; */
-    margin-top: 0.625em;
+    /* margin-top: 0.625em; */
 }
 
 
 /* title-text */
 
 .product .container .title-text{
-    margin: 1.875em 0px;
+    /* margin: 1.875em 0px; */
 }
 
 
@@ -164,8 +164,8 @@
     /* background-color: #efefef; */
     margin-top: 0.625em;
     border-radius: 0.625em;
-    width: 17.3em;
-    height: 31.25em;
+    width: 16.2em;
+    /* height: 31.25em; */
     border: 0.625em;
     cursor: pointer;
     border-radius: 1px solid #837d7d;
