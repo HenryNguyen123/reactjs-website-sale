@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router';
 ItemProduct.propTypes = {
     data: PropTypes.object,
     listDataProducts: PropTypes.array,
-    setQuantity: PropTypes.array
+    setQuantity: PropTypes.func
 
 }
 
@@ -26,7 +26,6 @@ export default function ItemProduct ({data, listDataProducts, setQuantity}) {
         setGetListDataProducts(listDataProducts)
         setTimeout(() => {
             setQuantity(1)
-            
         }, 100);
         navigate(`/product/${data.id}/${data.name}`)
     }

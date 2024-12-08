@@ -38,8 +38,10 @@
 .product .container .product-container .image .fiter-img {
     display: flex;
     cursor: pointer;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
 }
+
 
 .product .container .product-container .image .fiter-img .image-item{
     width: 6.25em;

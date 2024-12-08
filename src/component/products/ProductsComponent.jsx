@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 import './product.css'
 import { Badge } from "react-bootstrap"
@@ -78,27 +78,20 @@ export default function ProductsComponent() {
         for (let i = 0; i< data?.image?.length; i++) {
             let firstImg = data?.image?.[0].img
             setFirstImage(firstImg)
-            // if (firstImg) {
             let filterImage = data?.image?.filter(item => item.img !== firstImg)
             setListFilterImage(filterImage)
-            // }
         }
     }
 
     const handleOncickImg = (imgItem) => {
-        // for (let i = 0; i< data?.image?.length; i++) {
             let filterImage = data?.image?.filter(item => item.img !== imgItem.img)
             setListFilterImage(filterImage)
             setFirstImage(imgItem.img)
-
-        // }
     }
 
     useEffect(() => {
         handleImage()
     }, [data])
-
-
 
     return (
         <>
@@ -110,8 +103,8 @@ export default function ProductsComponent() {
                             <div className="fiter-img">
                                 {
                                     listFilterImage?.length > 0 && listFilterImage.map((value, key) => (
-                                        <div key={key} className="fiter-img" onClick={() => handleOncickImg(value)}>
-                                            <img style={{width:"70px"}} src={value.img} alt="" />
+                                        <div key={key} onClick={() => handleOncickImg(value)}>
+                                            <img style={{width:"70px"}} src={value.img} alt="" onClick={() => handleOncickImg(value)}/>
                                         </div>
                                     
                                     ))
